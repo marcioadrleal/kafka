@@ -5,7 +5,6 @@ INDEX VERSION 1.134+C:\curso\kafka\.metadata\.plugins\org.eclipse.jdt.core
 2858611013.index
 2237796206.index
 1388275114.index
-353395298.index
 3125862285.index
 1318221229.index
 725918027.index

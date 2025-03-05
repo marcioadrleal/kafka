@@ -41,16 +41,17 @@ public class StringConsumerConfig {
 	public ConcurrentKafkaListenerContainerFactory<String, String> strconsumerFactory() {
 		var factory = new ConcurrentKafkaListenerContainerFactory<String, String>();
 		factory.setConsumerFactory(consumerFactory());
-		factory.setRecordInterceptor(validMessage())
+		factory.setRecordInterceptor(validMessage());
 		return factory;
 	}
 
 	private RecordInterceptor<String, String> validMessage() {
 		
-		return x -> {
+		return ( x , y ) -> {
 			if ( x.value().contains("teste") ) {
-				
+			 
 			}
+			 return x;	
 		}; 
 		
 	}
